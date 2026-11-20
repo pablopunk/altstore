@@ -1,0 +1,42 @@
+{
+  "name": "pablopunk",
+  "subtitle": "Apps by pablopunk",
+  "description": "Notarized builds of pablopunk's open-source iOS apps.",
+  "iconURL": "https://raw.githubusercontent.com/pablopunk/spotifin/main/assets/branding/app_icon_ios.png",
+  "website": "https://github.com/pablopunk",
+  "tintColor": "#1DB954",
+  "featuredApps": [
+    "com.pablopunk.spotifin"
+  ],
+  "apps": [
+    {
+      "name": "Spotifin",
+      "bundleIdentifier": "com.pablopunk.spotifin",
+      "marketplaceID": "",
+      "developerName": "pablopunk",
+      "subtitle": "A Spotify-style player for your Jellyfin library.",
+      "localizedDescription": "Spotifin is a free, open-source, Spotify-style music player that connects to your existing Jellyfin library.\n\nSynced lyrics, daily mixes, offline downloads, remote play, Chromecast and CarPlay.\n\nSource code: https://github.com/pablopunk/spotifin",
+      "iconURL": "https://raw.githubusercontent.com/pablopunk/spotifin/main/assets/branding/app_icon_ios.png",
+      "tintColor": "#1DB954",
+      "category": "entertainment",
+      "screenshots": [
+        {
+          "imageURL": "https://raw.githubusercontent.com/pablopunk/spotifin/main/assets/screenshots/ios1.jpg",
+          "width": 1650,
+          "height": 1619
+        },
+        {
+          "imageURL": "https://raw.githubusercontent.com/pablopunk/spotifin/main/assets/screenshots/ios2.jpg",
+          "width": 1163,
+          "height": 1671
+        }
+      ],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}
