@@ -18,7 +18,7 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(__file__))
 from app_store_connect import AppStoreConnect, AppStoreConnectError  # noqa: E402
-from ipa_permissions import ipa_permissions, minimum_os_version  # noqa: E402
+from ipa_permissions import ipa_permissions  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "apps.json"
@@ -114,7 +114,9 @@ def sync_version(app, version, build_number, download_url):
     with tempfile.TemporaryDirectory() as temporary:
         files = download_adp(download_url, pathlib.Path(temporary))
         ipas = [path for path in files if path.suffix == ".ipa"]
-        permissions, info = ipa_permissions(ipas[0])
+        manifest = json.loads(next(path for path in files if path.name == "manifest.json").read_text())
+        if zipfile.is_zipfile(ipas[0]):
+            app["appPermissions"], _ = ipa_permissions(ipas[0])
         tag = f"{app['bundleIdentifier']}-{version}-{build_number}"
         asset_urls = publish_release_assets(tag, files)
         entry = {
@@ -125,10 +127,9 @@ def sync_version(app, version, build_number, download_url):
             "downloadURL": asset_urls["manifest"],
             "assetURLs": asset_urls,
             "size": ipas[0].stat().st_size,
-            "minOSVersion": minimum_os_version(info),
+            "minOSVersion": manifest["minimumSystemVersions"]["ios"],
         }
     app["versions"].insert(0, {key: value for key, value in entry.items() if value})
-    app["appPermissions"] = permissions
     print(f"Published {app['name']} {version} ({build_number})")
 
 

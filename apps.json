@@ -33,8 +33,14 @@
       ],
       "versions": [],
       "appPermissions": {
-        "entitlements": [],
-        "privacy": {}
+        "entitlements": [
+          "beta-reports-active",
+          "com.apple.developer.carplay-audio",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "Spotifin uses the local network to discover Chromecast devices on your Wi-Fi network."
+        }
       }
     }
   ],
