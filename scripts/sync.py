@@ -24,6 +24,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "apps.json"
 REPOS = ROOT / "repos.json"
 ALTSTORE_API = "https://api.altstore.io"
+ALTSTORE_USER_AGENT_ALLOWED_BY_CLOUDFLARE = "pablopunk-altstore-sync/1.0"
 SOURCE_REPO = os.environ.get("GITHUB_REPOSITORY", "pablopunk/altstore")
 
 
@@ -31,6 +32,7 @@ def altstore(method, path, body=None):
     data = json.dumps(body).encode() if body is not None else None
     request = urllib.request.Request(ALTSTORE_API + path, data=data, method=method)
     request.add_header("Content-Type", "application/json")
+    request.add_header("User-Agent", ALTSTORE_USER_AGENT_ALLOWED_BY_CLOUDFLARE)
     with urllib.request.urlopen(request) as response:
         payload = response.read()
     return json.loads(payload) if payload else {}
