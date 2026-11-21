@@ -18,7 +18,6 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(__file__))
 from app_store_connect import AppStoreConnect, AppStoreConnectError  # noqa: E402
-from ipa_permissions import ipa_permissions  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "apps.json"
@@ -115,8 +114,6 @@ def sync_version(app, version, build_number, download_url):
         files = download_adp(download_url, pathlib.Path(temporary))
         ipas = [path for path in files if path.suffix == ".ipa"]
         manifest = json.loads(next(path for path in files if path.name == "manifest.json").read_text())
-        if zipfile.is_zipfile(ipas[0]):
-            app["appPermissions"], _ = ipa_permissions(ipas[0])
         tag = f"{app['bundleIdentifier']}-{version}-{build_number}"
         asset_urls = publish_release_assets(tag, files)
         entry = {
