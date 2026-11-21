@@ -36,7 +36,7 @@
           "version": "0.7.0",
           "buildVersion": "32",
           "date": "2026-11-21",
-          "localizedDescription": "## What's Changed\n* Remove YouTube Music references from Downtify by @pablopunk in https://github.com/pablopunk/spotifin/pull/39\n* Publish iOS builds with Downtify to AltStore PAL by @pablopunk in https://github.com/pablopunk/spotifin/pull/38\n\n\n**Full Changelog**: https://github.com/pablopunk/spotifin/compare/v0.6.0...v0.7.0",
+          "localizedDescription": "## Spotifin 0.7.0 — AltStore\n\nThis release puts Spotifin on AltStore PAL for iPhone and iPad in the EU, with Downtify included, and removes the YouTube references from Downtify.\n\n- 📱 **AltStore PAL** — Spotifin is notarized by Apple and installs from the AltStore PAL source, with automatic updates. Downtify is included. The README has an \"Add to AltStore PAL\" button.\n- ☁️ **Downtify** — the search bar says \"Search songs, artists or albums\", and tapping a song opens its source page instead of YouTube Music.\n- ⚙️ **CI** — every tag release now uploads the iOS build to App Store Connect and submits it for notarization.\n\nLicensed under the [GNU Affero General Public License v3.0](https://github.com/pablopunk/spotifin/blob/v0.7.0/LICENSE).\n\nVerify with `SHA256SUMS`. **Full changelog**: https://github.com/pablopunk/spotifin/compare/v0.6.0...v0.7.0",
           "downloadURL": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/manifest.json",
           "assetURLs": {
             "signature": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/signature",
