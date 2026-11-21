@@ -12,7 +12,7 @@
     {
       "name": "Spotifin",
       "bundleIdentifier": "com.pablopunk.spotifin",
-      "marketplaceID": "",
+      "marketplaceID": "6837318118",
       "developerName": "pablopunk",
       "subtitle": "A Spotify-style player for your Jellyfin library.",
       "localizedDescription": "Spotifin is a free, open-source, Spotify-style music player that connects to your existing Jellyfin library.\n\nSynced lyrics, daily mixes, offline downloads, remote play, Chromecast and CarPlay.\n\nSource code: https://github.com/pablopunk/spotifin",
@@ -31,7 +31,29 @@
           "height": 1671
         }
       ],
-      "versions": [],
+      "versions": [
+        {
+          "version": "0.7.0",
+          "buildVersion": "32",
+          "date": "2026-11-21",
+          "localizedDescription": "## What's Changed\n* Remove YouTube Music references from Downtify by @pablopunk in https://github.com/pablopunk/spotifin/pull/39\n* Publish iOS builds with Downtify to AltStore PAL by @pablopunk in https://github.com/pablopunk/spotifin/pull/38\n\n\n**Full Changelog**: https://github.com/pablopunk/spotifin/compare/v0.6.0...v0.7.0",
+          "downloadURL": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/manifest.json",
+          "assetURLs": {
+            "signature": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/signature",
+            "manifest": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/manifest.json",
+            "be1829b6-35d5-3eb4-91cd-2bdb5fb9a85f": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/be1829b6-35d5-3eb4-91cd-2bdb5fb9a85f.ipa",
+            "ef2a7016-89bf-3fc4-a320-01b35208ede9": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/ef2a7016-89bf-3fc4-a320-01b35208ede9.ipa",
+            "f685e486-a891-324c-a940-73a3a591f9d4": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/f685e486-a891-324c-a940-73a3a591f9d4.ipa",
+            "94518047-fb40-3a29-b8cf-db5e9f887bf9": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/94518047-fb40-3a29-b8cf-db5e9f887bf9.ipa",
+            "8a243451-26e0-3397-9b23-10b8f2d08770": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/8a243451-26e0-3397-9b23-10b8f2d08770.ipa",
+            "d8cb3036-114f-3319-b73d-9fb65d659e68": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/d8cb3036-114f-3319-b73d-9fb65d659e68.ipa",
+            "4e6186fa-6623-3c64-8512-a401f2183a9a": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/4e6186fa-6623-3c64-8512-a401f2183a9a.ipa",
+            "b1ff5195-2230-3a4d-bbea-aa1a75d68b8c": "https://github.com/pablopunk/altstore/releases/download/com.pablopunk.spotifin-0.7.0-32/b1ff5195-2230-3a4d-bbea-aa1a75d68b8c.ipa"
+          },
+          "size": 14138798,
+          "minOSVersion": "16.0"
+        }
+      ],
       "appPermissions": {
         "entitlements": [
           "beta-reports-active",
